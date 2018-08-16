@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<h2>Enter Amout: </h2>
+<form [formGroup]="exForm">
+<ul>
+  <li>
+    <h2>Amount : <input type="text" name="amount" maxlength="10" addZeros formControlName="amount" placeholder="Enter amout" #amount></h2>
+  </li>
+  <li>
+    <h2>total Amount : <input type="text" name="total" formatAmount maxlength="12"  formControlName="total" placeholder="Enter total amout"></h2>
+  </li>
+  <li>
+    <h2>Phone : <input type="text" name="phone" maxlength="12" formatPhoneNumber formControlName="phone" placeholder="Enter amout" #phone></h2>
+  Form Value:{{exForm.value|json}}
+  </li>
+</ul>
+</form>
+
