@@ -52,7 +52,6 @@ export class FormatAmountDirective implements OnChanges{
 
     ngOnChanges(changes: SimpleChanges){
         if(changes.formatAmount){
-            console.log(changes);
             let formattedAmount=this.addComma(this.el.nativeElement.value);
             if(formattedAmount){
                 this.el.nativeElement.value=formattedAmount;
